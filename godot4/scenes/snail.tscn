@@ -1,0 +1,10 @@
+[gd_scene load_steps=3 format=3 uid="uid://cbhuse8anaukq"]
+
+[ext_resource type="Texture2D" uid="uid://cxyvqr2h3qo85" path="res://sprites/snail.png" id="1_m7xb3"]
+[ext_resource type="Script" path="res://scenes/snail.gd" id="2_ecgwf"]
+
+[node name="Snail" type="Sprite2D"]
+scale = Vector2(1.25, 1.25)
+z_index = 1
+texture = ExtResource("1_m7xb3")
+script = ExtResource("2_ecgwf")

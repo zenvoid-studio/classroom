@@ -1,0 +1,36 @@
+[gd_resource type="Theme" load_steps=8 format=3 uid="uid://s5ueoqfwe7eb"]
+
+[ext_resource type="FontFile" uid="uid://do0cfwrdxd1yd" path="res://typefaces/kalam/Kalam-Bold.ttf" id="2_rryeg"]
+
+[sub_resource type="StyleBoxEmpty" id="1"]
+
+[sub_resource type="StyleBoxEmpty" id="2"]
+
+[sub_resource type="StyleBoxEmpty" id="3"]
+
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_2osm7"]
+
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_ndygr"]
+
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_3ltqh"]
+
+[resource]
+default_font = ExtResource("2_rryeg")
+default_font_size = 22
+Label/colors/font_color = Color(0, 0, 0, 1)
+LineEdit/colors/cursor_color = Color(0, 0, 0, 1)
+LineEdit/colors/font_color = Color(0.117647, 0.431373, 0.870588, 1)
+LineEdit/colors/font_uneditable_color = Color(0.117647, 0.431373, 0.870588, 1)
+LineEdit/constants/caret_width = 3
+LineEdit/styles/focus = SubResource("1")
+LineEdit/styles/normal = SubResource("2")
+LineEdit/styles/read_only = SubResource("3")
+TextEdit/colors/caret_color = Color(0, 0, 0, 1)
+TextEdit/colors/font_color = Color(0.117647, 0.431373, 0.870588, 1)
+TextEdit/colors/font_readonly_color = Color(0.117647, 0.431373, 0.870588, 1)
+TextEdit/colors/selection_color = Color(0, 0, 0, 0.14902)
+TextEdit/constants/caret_width = 3
+TextEdit/constants/line_spacing = 1
+TextEdit/styles/focus = SubResource("StyleBoxEmpty_2osm7")
+TextEdit/styles/normal = SubResource("StyleBoxEmpty_ndygr")
+TextEdit/styles/read_only = SubResource("StyleBoxEmpty_3ltqh")

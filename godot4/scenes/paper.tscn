@@ -1,0 +1,27 @@
+[gd_scene load_steps=4 format=3 uid="uid://bwgvbwrxpv147"]
+
+[ext_resource type="Script" path="res://scenes/paper.gd" id="1_2ojp3"]
+[ext_resource type="Texture2D" uid="uid://cu4kubqq56105" path="res://backgrounds/paper1.png" id="2_4155y"]
+[ext_resource type="Theme" uid="uid://s5ueoqfwe7eb" path="res://ui/paper-theme.tres" id="3"]
+
+[node name="Paper" type="Control"]
+layout_mode = 3
+anchors_preset = 0
+script = ExtResource("1_2ojp3")
+
+[node name="Background" type="Sprite2D" parent="."]
+texture = ExtResource("2_4155y")
+
+[node name="VBoxContainer" type="VBoxContainer" parent="."]
+layout_mode = 0
+offset_left = -300.0
+offset_top = -392.0
+offset_right = 311.0
+offset_bottom = 397.0
+theme = ExtResource("3")
+
+[node name="Lines" type="Node2D" parent="."]
+
+[node name="Dots" type="Node2D" parent="."]
+
+[node name="SnailStart" type="Node2D" parent="."]
