@@ -4,7 +4,7 @@ const min_step_time := 0.05
 
 var lines := []
 var update_line := false
-var step_time := 0.0
+var step_time := 0.3
 var pixels_per_unit := 1
 var lines_parent_node: Node2D
 var dots_parent_node: Node2D
