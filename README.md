@@ -2,7 +2,7 @@
 
 ![](screenshot.png)
 
-Plantilla de proyecto para [Godot Engine](https://godotengine.org/) pensado para enseñar los conceptos básicos de programación, sintaxis de GDScript, metodología de programación y algoritmos. Lo usamos en [Zenvoid Studio](https://games.zenvoid.org/) para jóvenes o personas que se adentran por primera vez en la programación informática. Incluye un caracol que está inspirado en la famosa tortuga del leguaje de programación LOGO.
+Plantilla de proyecto para [Godot Engine](https://godotengine.org/) pensado para enseñar los conceptos básicos de programación, sintaxis de GDScript, metodología de programación y algoritmos. Lo usamos en [Zenvoid Studio](https://games.zenvoid.org/) para jóvenes o personas que se adentran por primera vez en la programación informática. Incluye un caracol que está inspirado en la famosa tortuga del lenguaje de programación LOGO.
 
 ---
 
