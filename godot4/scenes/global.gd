@@ -31,7 +31,7 @@ func queue_command(object: Object, method: String, args: Array) -> int:
 	return cmd_id - 1
 
 
-func exec_priority_command(object: Object, method: String, args: Array):
+func exec_priority_command(object: Object, method: String, args: Array) -> void:
 	priority = true
 	Callable(object, method).callv(args)
 
@@ -54,13 +54,13 @@ func return_value(target_id: int):
 	return last_return_value
 
 
-func wait_for_enter(object: Object, method: String, args: Array):
+func wait_for_enter(object: Object, method: String, args: Array) -> void:
 	enter_fn = Callable(object, method)
 	enter_fn_args = args
 	enter_fn_ready = true
 
 
-func _exec_command():
+func _exec_command() -> void:
 	if cmd_queue.size() == 0:
 		return
 

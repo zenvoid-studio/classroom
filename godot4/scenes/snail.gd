@@ -162,6 +162,6 @@ func _color(c: Color) -> void:
 	Global.finish_command()
 
 
-func _exit():
+func _exit() -> void:
 	remove_snail()
 	Global.finish_command()

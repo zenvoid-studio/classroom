@@ -45,12 +45,12 @@ func clone(snail: Sprite2D) -> Sprite2D:
 # ---------------------------------------------------------
 
 
-func _write(text: String):
+func _write(text: String) -> void:
 	paper_list[-1].write(text)
 	Global.finish_command()
 
 
-func _answer():
+func _answer() -> void:
 	var edit: TextEdit = paper_list[-1].answer()
 	Global.wait_for_enter(self, "_finish_answer", [edit])
 
@@ -67,7 +67,7 @@ func _pause(seconds: float) -> void:
 		Global.wait_for_enter(self, "_pause_finish", [])
 
 
-func _pause_finish():
+func _pause_finish() -> void:
 	Global.finish_command()
 
 
@@ -110,5 +110,5 @@ func _clone(snail: Sprite2D) -> void:
 	Global.finish_command(snail2)
 
 
-func _paper_overflow():
+func _paper_overflow() -> void:
 	Global.exec_priority_command(self, "_new_page", [])
