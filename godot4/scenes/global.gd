@@ -7,6 +7,7 @@ var cmd_id := 0
 var cmd_current := 0
 var cmd_queue := []
 var last_return_value
+var priority := false
 
 var enter_fn_ready := false
 var enter_fn: Callable
@@ -30,13 +31,21 @@ func queue_command(object: Object, method: String, args: Array) -> int:
 	return cmd_id - 1
 
 
+func exec_priority_command(object: Object, method: String, args: Array):
+	priority = true
+	Callable(object, method).callv(args)
+
+
 func finish_command(value = null) -> void:
 	await get_tree().process_frame
-	last_return_value = value
-	emit_signal("cmd_finished")
-	cmd_current += 1
-	busy = false
-	_exec_command()
+	if priority:
+		priority = false
+	else:
+		last_return_value = value
+		emit_signal("cmd_finished")
+		cmd_current += 1
+		busy = false
+		_exec_command()
 
 
 func return_value(target_id: int):

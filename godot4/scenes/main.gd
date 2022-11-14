@@ -73,6 +73,7 @@ func _pause_finish():
 
 func _new_page() -> void:
 	var paper := preload("res://scenes/paper.tscn").instantiate()
+	paper.connect("overflow", _paper_overflow)
 	if paper_list.size() > 0:
 		if paper_list.size() > 1:
 			await paper_list[-1].remove_snail()
@@ -107,3 +108,7 @@ func _clone(snail: Sprite2D) -> void:
 	snail2.rotation = snail.rotation
 	snail2.ink_color = snail.ink_color
 	Global.finish_command(snail2)
+
+
+func _paper_overflow():
+	Global.exec_priority_command(self, "_new_page", [])

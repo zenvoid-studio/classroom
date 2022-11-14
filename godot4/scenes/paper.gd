@@ -1,10 +1,12 @@
 extends Control
 
 signal enter
+signal overflow
 
 var default_write_color := Color(0.0, 0.0, 0.0)
 var default_response_color := Color("1e6ede")
 var background_color := 0
+var text_overflow := false
 
 var snails := []
 
@@ -63,3 +65,9 @@ func get_snail_start_pos() -> Vector2:
 func remove_snail() -> void:
 	for snail in snails:
 		await snail.remove_snail()
+
+
+func _on_container_resized():
+	if not text_overflow:
+		text_overflow = true
+		emit_signal("overflow")

@@ -25,3 +25,5 @@ theme = ExtResource("3")
 [node name="Dots" type="Node2D" parent="."]
 
 [node name="SnailStart" type="Node2D" parent="."]
+
+[connection signal="resized" from="VBoxContainer" to="." method="_on_container_resized"]
