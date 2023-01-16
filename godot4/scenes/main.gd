@@ -9,7 +9,7 @@ var paper_list := []
 func _ready():
 	new_page()
 	if has_method("start"):
-		self.start()
+		Callable(self, "start").call()
 
 
 # ---------------------------------------------------------
